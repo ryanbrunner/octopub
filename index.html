@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- TODO: Replace these with minified assets. -->
-    <script src="lib/jquery-1.7.1.min.js"></script>
-    <script src="lib/underscore.js"></script>
-    <script src="lib/backbone.js"></script>
-    
-    <script src="js/models/remote_model.js"></script>
-    <script src="js/models/github_model.js"></script>
-    <script src="js/models/user.js"></script>
+    <script src='cjs/octopub.js' type='text/javascript'></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="css/octopub.css" />
+
+    <script type='text/javascript'>
+      $(function() {
+        window.appView = new AppView();
+        window.appView.render();
+      })
+    </script>
   </head>
 
-  <body>
+  <body style='padding-top: 50px;' id='app-view'>
+    <nav class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="span2">
+              <a class='brand with-logo octopus-white' href='#'>Octopub</a>
+            </div>
+            <div class='span4' id='actions'>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
 
+    <div class="container-fluid" id='work-area'>
+      
+    </div>
   </body>
 </html>

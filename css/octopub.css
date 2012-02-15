@@ -1,0 +1,11 @@
+.with-logo {
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.with-logo.octopus-white {
+  background-image: url(file:///Users/ryan/Code/octopub/img/octopus_white.png);
+}
+.with-logo.octopus-black {
+  background-image: url(file:///Users/ryan/Code/octopub/img/octopus_white.png) 
+}

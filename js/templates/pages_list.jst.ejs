@@ -1,0 +1,12 @@
+<header>
+  <h1>Pages</h1>
+  <p class='lead'>
+    Click on any page below to preview or make changes. When you're satisfied with all your changes,
+    click 'Publish' to push changes up to your GitHub site.
+  </p>
+
+  <ul class='unstyled list well'>
+  <% collection.each(function(page) { %>
+    <%= JST['templates/page']({page: page}) %>
+  <% }); %>
+  </ul>

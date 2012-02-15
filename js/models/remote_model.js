@@ -13,3 +13,12 @@ var RemoteModel = Backbone.Model.extend({
     Backbone.sync(method, model, options);
   }
 });
+
+var RemoteCollection = Backbone.Collection.extend({
+  sync: function(method, model, options) {
+    // Ensure that GET requests are sent as JSONP requests.
+    _.extend(options, { dataType: 'jsonp'} );
+
+    Backbone.sync(method, model, options);
+  }
+})

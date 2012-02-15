@@ -1,0 +1,14 @@
+<li>
+  <h4>
+    <a class='edit-page'><%= page.escape('name') %></a>
+    
+      <% if (page.get('state') == 'new') { %>
+        <span class='label label-warning'>New</span>
+      <% } else if (page.get('state') == 'changed') { %>
+        <span class='label label-warning'>Changed</span>
+      <% } else { %>
+        <span class='label label-success'>Published</span>
+      <% } %>
+  </h4>
+  <div>Last Updated on: <%= page.escape('updated_at') %></h4>
+</li>
